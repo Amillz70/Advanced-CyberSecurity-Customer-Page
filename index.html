@@ -13,5 +13,89 @@
     </head>
     <body>
       <h1>CyberIDLock ID Protection</h1>
+
+      <ul>
+        <li>EndpointLock Keystroke Encryption Activation Key</li>
+        <li>Access to Unlimited Dark Web Email Scanning</li>
+        <li>Your $25,000 Identity Theft Coverage</li>
+        <li>Fully Managed Recovery ID Protection services</li>
+      </ul>
+
+<span>
+      <h3>Bundle Type *</h3>
+      <select name="bundle">
+        <option>1 Device EndpointLock</option>
+        <option>3 Device EndpointLock</option>
+      </select>
+</span>
+
+<span>
+      <h3>First Name *</h3>
+      <input name="firstname" type="text" required>
+</span>
+
+<span>
+    <h3>Last Name *</h3>
+    <input name="lastname" type="text" required>
+</span>
+
+
+<span>
+    <h3>Email *</h3>
+    <input name="email" type="email" required>
+</span>
+
+<span>
+    <h3>Repeat Email *</h3>
+    <input name="email" type="email" oninput="check(this)" required>
+</span>
+
+<script language="javascript" type="text/javascript">
+    function check(input) {
+        if (input.value != document.getElementById("email").value) {
+            input.setCustomValidity('Password Must be Matching.');
+        } else {
+            // input is valid -- reset the error message
+            input.setCustomValidity('');
+        }
+    }
+</script>
+
+<span>
+    <h3>Phone</h3>
+    <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" placeholder="### ### ####">
+</span>
+
+<span>
+    <h3>Address</h3>
+    <input name="address" type="text">
+</span>
+
+<span>
+    <h3>City</h3>
+    <input name="city" type="text">
+</span>
+
+<span>
+    <h3>State</h3>
+    <input name="state" type="text">
+</span>
+
+<span>
+    <h3>Postal/ Zip Code</h3>
+    <input name="zip" type="text">
+</span>
+
+<span>
+    <h3>Country</h3>
+    <input name="country" type="text">
+</span>
+
+<br>
+
+<span>
+<button>Submit Form</button>
+</span>
+
     </body>
 </html>
