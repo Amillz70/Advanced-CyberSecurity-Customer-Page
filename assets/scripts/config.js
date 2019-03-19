@@ -2,7 +2,7 @@
 
 let apiUrl
 const apiUrls = {
-  production: '<replace-with-heroku-url>',
+  production: 'https://acs-v1.endpointlock.com/api/cidlicense',
   development: 'http://localhost:4741'
 }
 
