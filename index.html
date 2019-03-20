@@ -1,113 +1,185 @@
 <!DOCTYPE html>
 <html>
-    <head>
-      <title>Example</title>
-      <meta name="viewport" content="width=device-width, initial-scale=1">
+  <head>
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-      <!-- Do not add `link` tags-->
-      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+    <!-- Do not add `link` tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
 
-      <!-- Do not add `script` tags-->
-      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
-      
-    </head>
-    <body>
+    <!-- Do not add `script` tags -->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+  </head>
 
-  <h3 id="display-message"></h3>
-  <h3 id="second-display-message"></h3>
+  <body>
+    <h3 id="display-message"></h3>
+    <h3 id="second-display-message"></h3>
+    <br />
+    <h1>CyberIDLock ID Protection</h1>
 
-      <h1>CyberIDLock ID Protection</h1>
+    <ul>
+      <li>EndpointLock Keystroke Encryption Activation Key</li>
+      <li>Access to Unlimited Dark Web Email Scanning</li>
+      <li>Your $25,000 Identity Theft Coverage</li>
+      <li>Fully Managed Recovery ID Protection services</li>
+    </ul>
 
-      <ul>
-        <li>EndpointLock Keystroke Encryption Activation Key</li>
-        <li>Access to Unlimited Dark Web Email Scanning</li>
-        <li>Your $25,000 Identity Theft Coverage</li>
-        <li>Fully Managed Recovery ID Protection services</li>
-      </ul>
-
-<span>
+    <span>
       <h3>Bundle Type *</h3>
       <select name="bundle" id="Bundle Type">
-        <option id="verizon1" value="1 Device EndpointLock" data-index="0">1 Device EndpointLock</option>
-        <option id="verizon3" value="3 Device EndpointLock" data-index="1">3 Device EndpointLock</option>
+        <option id="verizon1" value="1 Device EndpointLock" data-index="0" > 1 Device EndpointLock </option>
+        <option id="verizon3" value="3 Device EndpointLock" data-index="1">3 Device EndpointLock </option>
       </select>
-</span>
+    </span>
 
-<br>
+    <br />
 
-<form>
-      <h3>First Name *</h3>
-<input name="firstname" type="text" maxlength="32" required>
-</form>
-
-<span>
-    <h3>Last Name *</h3>
-    <input name="lastname" type="text" maxlength="32" required>
-</span>
-
-
-<span>
-    <h3>Email *</h3>
-    <input name="email" id="email" type="email" maxlength="32" required>
-</span>
-
-<span>
-    <h3>Repeat Email *</h3>
-    <input name="email" id="repeat_email" type="email" maxlength="32" required>
-</span>
-
-<script language="javascript" type="text/javascript">
-    // function check(input) {
-    //     if (input.value != document.getElementById("email").value) {
-    //         input.setCustomValidity('Password Must be Matching.');
-    //     } else {
-    //         // input is valid -- reset the error message
-    //         input.setCustomValidity('');
-    //     }
-    // }
-    let email = document.getElementById("email").value
-    let repeatEmail = document.getElementById("repeat_email").value
-      if(email != repeatEmail) {
-        $('#display-message').html('Incorrect email. Please make sure both email forms match.')
+    <script>
+      function validateFirstNameForm() {
+        const firstName = document.forms['firstname']['fname'].value
+        if (firstName == '') {
+          // alert("Name must be filled out");
+          $(`#display-message`).html('Please enter a valid First Name.')
+          return false
+        }
       }
-</script>
+    </script>
 
-<span>
-    <h3>Phone</h3>
-    <input name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" maxlength="24" placeholder="### ### ####">
-</span>
+    <span>
+      <h3>First Name *</h3>
+      <input name="firstname" type="text" maxlength="32" required />
+    </span>
 
-<span>
-    <h3>Address</h3>
-    <input name="address" type="text" maxlength="32">
-</span>
+    <script>
+    function validateLastNameForm() {
+      const firstName = document.forms['firstname'].value
+      if (firstName == '') {
+        // alert("Name must be filled out");
+        $(`#display-message`).html('Please enter a valid First Name.')
+        return false
+      }
+    }
+    </script>
 
-<span>
-    <h3>City</h3>
-    <input name="city" type="text" maxlength="32">
-</span>
+    <span>
+      <h3>Last Name *</h3>
+      <input name="lastname" type="text" maxlength="32" required />
+    </span>
 
-<span>
-    <h3>State</h3>
-    <input name="state" type="text" maxlength="50">
-</span>
+  <script>
+    function validateLastNameForm() {
+      const firstName = document.forms['lastname'].value
+      if (firstName == '') {
+        // alert("Name must be filled out");
+        $(`#display-message`).html('Please enter a valid First Name.')
+        return false
+      }
+    }
+  </script>
 
-<span>
-    <h3>Postal/ Zip Code</h3>
-    <input name="zip" type="text" maxlength="9">
-</span>
+  <script>
+    function validateEmailForm() {
+      const email = document.forms['email'].value
+      if (firstName == '') {
+        // alert("Name must be filled out");
+        $(`#display-message`).html('Please enter a valid Email.')
+        return false
+      }
+    }
+  </script>
 
-<span>
-    <h3>Country</h3>
-    <input name="country" type="text" maxlength="30">
-</span>
+    <span>
+      <h3>Email *</h3>
+      <input name="email" id="email" type="email" maxlength="32" required />
+    </span>
 
-<br>
+    <script>
+      function validateConfirmEmailForm() {
+        const repeatEmail = document.forms['repeat_email'].value
+        if (repeatEmail == '') {
+          // alert("Name must be filled out");
+          $(`#display-message`).html('Please enter a valid Repeat Email.');
+          return false
+        }
+      //   if (email !== repeatEmail) {
+      //       $(`#second-display-message`).html('Please make sure Email and Repeat Email match')
+      //       return false,
+      //     }
+      }
+    </script>
 
-<span>
-<button>Submit Form</button>
-</span>
+    <span>
+      <h3>Repeat Email *</h3>
+      <input name="repeat_email" id="repeat_email" type="email" maxlength="32" required/>
+    </span>
 
-    </body>
+    <!-- <script language="javascript" type="text/javascript">
+      // function check(input) {
+      //     if (input.value != document.getElementById("email").value) {
+      //         input.setCustomValidity('Password Must be Matching.');
+      //     } else {
+      //         // input is valid  reset the error message
+      //         input.setCustomValidity('');
+      //     }
+      // }
+      let email = document.getElementById('email').value
+      let repeatEmail = document.getElementById('repeat_email').value
+      if (email != repeatEmail) {
+        $('#display-message').html(
+          'Incorrect email. Please make sure both email forms match.'
+        )
+      } -->
+    </script>
+
+<!-- Phone -->
+    <span>
+      <h3>Phone</h3>
+      <input
+        name="phone"
+        type="tel"
+        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
+        maxlength="24"
+        placeholder="### ### ####"
+      />
+    </span>
+
+<!-- Address -->
+    <span>
+      <h3>Address</h3>
+      <input name="address" type="text" maxlength="32" />
+    </span>
+
+<!-- City -->
+    <span>
+      <h3>City</h3>
+      <input name="city" type="text" maxlength="32" />
+    </span>
+
+<!-- State -->
+    <span>
+      <h3>State</h3>
+      <input name="state" type="text" maxlength="50" />
+    </span>
+
+<!-- Zip Code -->
+    <span>
+      <h3>Postal/ Zip Code</h3>
+      <input name="zip" type="text" maxlength="9" />
+    </span>
+
+<!-- Country -->
+    <span>
+      <h3>Country</h3>
+      <input name="country" type="text" maxlength="30" />
+    </span>
+
+<!-- submit button -->
+    <br />
+    <form id="submit-button">
+      <span>
+        <button>Submit Form</button>
+      </span>
+    </form>
+  </body>
 </html>
