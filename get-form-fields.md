@@ -1,4 +1,4 @@
-### How to use `getFormFields`
+<!-- ### How to use `getFormFields`
 
 To be able to send data to an API, we'll need a way to retrieve that data from
 forms in the DOM. It turns out that needing to grab some user
@@ -43,4 +43,4 @@ Then, the `bookData` variable would look like this:
 ```
 
 Note that in your projects, the code above will be spread out over several
-files.
+files. -->
