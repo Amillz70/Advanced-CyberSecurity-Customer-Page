@@ -69,8 +69,8 @@
 
   <script>
     function validateLastNameForm() {
-      const firstName = document.forms['lastname'].value
-      if (firstName == '') {
+      const lastName = document.forms['lastname'].value
+      if (lastName == '') {
         // alert("Name must be filled out");
         $(`#display-message`).html('Please enter a valid First Name.')
         return false
@@ -81,7 +81,7 @@
   <script>
     function validateEmailForm() {
       const email = document.forms['email'].value
-      if (firstName == '') {
+      if (email == '') {
         // alert("Name must be filled out");
         $(`#display-message`).html('Please enter a valid Email.')
         return false
