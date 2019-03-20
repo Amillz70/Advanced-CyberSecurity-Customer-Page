@@ -10,9 +10,13 @@
     <!-- Do not add `script` tags -->
     <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
     <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <!-- <script src="./index.js" type="text/javascript" charset="utf-8" defer></script> -->
+
   </head>
 
   <body>
+  <div class="container">
+
     <h3 id="display-message"></h3>
     <h3 id="second-display-message"></h3>
     <br />
@@ -35,23 +39,53 @@
 
     <br />
 
-    <script>
+    <!-- <script>
       function validateFirstNameForm() {
-        const firstName = document.forms['firstname']['fname'].value
+        const firstName = document.forms['firstname'].value
         if (firstName == '') {
-          // alert("Name must be filled out");
-          $(`#display-message`).html('Please enter a valid First Name.')
+          alert("Name must be filled out");
+          // $(`#display-message`).html('Please enter a valid First Name.')
           return false
         }
       }
-    </script>
+    </script> -->
 
-    <span>
+    <span id="first-name">
       <h3>First Name *</h3>
-      <input name="firstname" type="text" maxlength="32" required />
+      <input name="firstname" id="firstname" type="text" maxlength="32" required />
     </span>
 
+<!-- <script>
+    document.querySelector("#first-name").addEventListener("submit", function(e){
+    if(!doValidation()){
+        e.preventDefault();    //stop form from submitting
+        alert("Not valid!");
+    }
+});
+
+function doValidation(){
+    var isValid = false;
+    //do your validation
+    isValid = /^\d{3}$/.test(document.querySelector("#firstname").value);
+    return isValid;
+}
+
+</script> -->
+
     <script>
+
+    document.querySelector('#firstname').addEventListener('invalid', function () {
+      // event.preventDefault()
+      this.setCustomValidity('This is not a 3 digit number')
+    })
+    document.querySelector('#firstname').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+
+    </script>
+
+    <!-- <script>
     function validateLastNameForm() {
       const firstName = document.forms['firstname'].value
       if (firstName == '') {
@@ -60,14 +94,25 @@
         return false
       }
     }
-    </script>
+    </script> -->
 
     <span>
       <h3>Last Name *</h3>
-      <input name="lastname" type="text" maxlength="32" required />
+      <input name="lastname" id="lastname" type="text" maxlength="32" required />
     </span>
 
-  <script>
+
+        <script>
+        document.querySelector('#lastname').addEventListener('invalid', function () {
+          // e.preventDefault()
+          this.setCustomValidity('message')
+        })
+        document.querySelector('#lastname').addEventListener('input', function () {
+          // e.preventDefault()
+          this.setCustomValidity('')
+        })
+        </script>
+  <!-- <script>
     function validateLastNameForm() {
       const lastName = document.forms['lastname'].value
       if (lastName == '') {
@@ -76,9 +121,9 @@
         return false
       }
     }
-  </script>
+  </script> -->
 
-  <script>
+  <!-- <script>
     function validateEmailForm() {
       const email = document.forms['email'].value
       if (email == '') {
@@ -87,7 +132,7 @@
         return false
       }
     }
-  </script>
+  </script> -->
 
     <span>
       <h3>Email *</h3>
@@ -95,6 +140,16 @@
     </span>
 
     <script>
+    document.querySelector('#email').addEventListener('invalid', function () {
+      // e.preventDefault()
+      this.setCustomValidity('message')
+    })
+    document.querySelector('#email').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+    </script>
+    <!-- <script>
       function validateConfirmEmailForm() {
         const repeatEmail = document.forms['repeat_email'].value
         if (repeatEmail == '') {
@@ -107,12 +162,23 @@
       //       return false,
       //     }
       }
-    </script>
+    </script> -->
 
     <span>
       <h3>Repeat Email *</h3>
       <input name="repeat_email" id="repeat_email" type="email" maxlength="32" required/>
     </span>
+
+    <script>
+    document.querySelector('#repeat_email').addEventListener('invalid', function () {
+      // e.preventDefault()
+      this.setCustomValidity('message')
+    })
+    document.querySelector('#repeat_email').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+    </script>
 
     <!-- <script language="javascript" type="text/javascript">
       // function check(input) {
@@ -181,5 +247,7 @@
         <button>Submit Form</button>
       </span>
     </form>
+
+  </div>
   </body>
 </html>

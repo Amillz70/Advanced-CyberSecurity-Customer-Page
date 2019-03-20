@@ -15,16 +15,30 @@ require('./assets/scripts/app.js')
 // styles
 require('./assets/styles/index.scss')
 
-// let email = document.getElementById('password')
-// let repeatEmail = document.getElementById('confirm_password')
+// first name on submit
+// document.getElementById('first-name').addEventListener('submit', functSubmit)
 //
-// function validatePassword(){
-//   if(email.value != repeatEmail.value) {
-//     repeatEmail.setCustomValidity("Emails Don't Match");
-//   } else {
-//     confirm_password.setCustomValidity('');
-//   }
+// function functSubmit (event) {
+//   const msg = document.getElementById('firstname').value
+//   alert(msg)
 // }
-//
-// email.onchange = validateEmail
-// repeatEmail.onkeyup = validateEmail
+
+// const ele = document.getElementById('first-name')
+// if (ele.addEventListener) {
+//   ele.addEventListener('submit', callback, false)  //Modern browsers
+// } else if (ele.attachEvent) {
+//   ele.attachEvent('onsubmit', callback)            //Old IE
+// }
+
+// document.querySelector('firstname').addEventListener('submit', function(e) {
+//   if(!isValid) {
+//     e.preventDefault()    //stop form from submitting
+//   }
+// })
+
+// document.querySelector('firstname').addEventListener('invalid', function () {
+//   this.setCustomValidity('This is not a 3 digit number')
+// })
+// document.querySelector('firstname').addEventListener('input', function () {
+//   this.setCustomValidity('')
+// })
