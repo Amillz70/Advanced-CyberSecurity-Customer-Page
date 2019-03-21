@@ -29,7 +29,20 @@
       <li>Fully Managed Recovery ID Protection services</li>
     </ul>
 
-    <form id="submit-button" onsubmit="repeatEmail()">
+<script>
+function checkEmail(theForm) {
+  if (theForm.email.value != theForm.repeat_email.value)
+  {
+      alert('Those emails don\'t match!');
+      // this.setCustomValidity('Please make sure the Email and Repeat Email match.')
+      return false;
+  } else {
+      return true;
+  }
+}
+</script>
+
+    <form id="submit-form" onsubmit="return checkEmail(this)">
     <span>
       <h3>Bundle Type *</h3>
       <select name="bundle" id="Bundle Type">
@@ -165,6 +178,7 @@ function doValidation(){
       }
     </script> -->
 
+
     <span>
       <h3>Repeat Email *</h3>
       <input name="repeat_email" id="repeat_email" type="email" maxlength="32" required/>
@@ -183,23 +197,7 @@ function doValidation(){
   }
     </script>
 
-    <!-- <script language="javascript" type="text/javascript">
-      // function check(input) {
-      //     if (input.value != document.getElementById("email").value) {
-      //         input.setCustomValidity('Password Must be Matching.');
-      //     } else {
-      //         // input is valid  reset the error message
-      //         input.setCustomValidity('');
-      //     }
-      // }
-      let email = document.getElementById('email').value
-      let repeatEmail = document.getElementById('repeat_email').value
-      if (email != repeatEmail) {
-        $('#display-message').html(
-          'Incorrect email. Please make sure both email forms match.'
-        )
-      } -->
-    </script>
+
 
 <!-- Phone -->
     <span>
@@ -209,7 +207,7 @@ function doValidation(){
         type="tel"
         pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         maxlength="24"
-        placeholder="### ### ####"
+        placeholder="###-###-####"
       />
     </span>
 
@@ -249,6 +247,18 @@ function doValidation(){
       <span>
         <button>Submit Form</button>
       </span>
+
+      <script>
+// when submit button clicked
+function onSubmit() {
+
+        // if form is not filled out completley
+        alert('Please fill out all required fields.')
+        // else if no Customer already created
+      alert('Customer Successfully Created, a welcome letter has been sent to the email address provided.')
+      // else if customer already exists
+      alert('Error. No account was created. Please check you entries and try again.')}
+      </script>
     </form>
 
   </div>
