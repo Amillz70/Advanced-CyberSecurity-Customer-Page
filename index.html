@@ -17,6 +17,7 @@
   <body>
   <div class="container">
 
+<!-- Page Title and List ////////////////////////////////////////////////////-->
     <br />
     <h1>CyberIDLock ID Protection</h1>
 
@@ -48,15 +49,17 @@ function checkEmail(theForm) {
   <script>
 // when submit button clicked
   function creationAlert() {
-
       // if no Customer already created
+      if (email.value() === '') {
         alert('Customer Successfully Created, a welcome letter has been sent to the email address provided.')
-      // else if customer already exists
-        alert('Error. No account was created. Please check you entries and try again.')}
+      } else {
+        alert('Error. No account was created. Please check you entries and try again.')
+      }
+    }
   </script>
 
 <!-- Form Submit start //////////////////////////////////////////////////////-->
-    <form id="submit-form" onsubmit="return checkEmail(this)" "creationAlert(this)">
+    <form id="submit-form" onsubmit="return checkEmail(this)" "return creationAlert(this)">
 
 <!-- Bundle Type ////////////////////////////////////////////////////////////-->
     <span>
@@ -184,6 +187,9 @@ function checkEmail(theForm) {
       <h3>Country</h3>
       <input name="country" type="text" maxlength="30" />
     </span>
+
+<!-- * Required  //////////////////////////////////////////////////////////////-->
+<h6>* - required field</h6>
 
 <!-- Submit Button //////////////////////////////////////////////////////////-->
     <br />
