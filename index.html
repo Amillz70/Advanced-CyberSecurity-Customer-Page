@@ -17,8 +17,6 @@
   <body>
   <div class="container">
 
-    <h3 id="display-message"></h3>
-    <h3 id="second-display-message"></h3>
     <br />
     <h1>CyberIDLock ID Protection</h1>
 
@@ -28,6 +26,9 @@
       <li>Your $25,000 Identity Theft Coverage</li>
       <li>Fully Managed Recovery ID Protection services</li>
     </ul>
+
+
+<!-- Email match function ///////////////////////////////////////////////////-->
 
 <script>
 function checkEmail(theForm) {
@@ -42,7 +43,22 @@ function checkEmail(theForm) {
 }
 </script>
 
-    <form id="submit-form" onsubmit="return checkEmail(this)">
+<!-- Alerts to customer if account creation /////////////////////////////////-->
+
+  <script>
+// when submit button clicked
+  function creationAlert() {
+
+      // if no Customer already created
+        alert('Customer Successfully Created, a welcome letter has been sent to the email address provided.')
+      // else if customer already exists
+        alert('Error. No account was created. Please check you entries and try again.')}
+  </script>
+
+<!-- Form Submit start //////////////////////////////////////////////////////-->
+    <form id="submit-form" onsubmit="return checkEmail(this)" "creationAlert(this)">
+
+<!-- Bundle Type ////////////////////////////////////////////////////////////-->
     <span>
       <h3>Bundle Type *</h3>
       <select name="bundle" id="Bundle Type">
@@ -53,38 +69,11 @@ function checkEmail(theForm) {
 
     <br />
 
-    <!-- <script>
-      function validateFirstNameForm() {
-        const firstName = document.forms['firstname'].value
-        if (firstName == '') {
-          alert("Name must be filled out");
-          // $(`#display-message`).html('Please enter a valid First Name.')
-          return false
-        }
-      }
-    </script> -->
-
+<!-- First Name /////////////////////////////////////////////////////////////-->
     <span id="first-name">
       <h3>First Name *</h3>
       <input name="firstname" id="firstname" type="text" maxlength="32" required />
     </span>
-
-<!-- <script>
-    document.querySelector("#first-name").addEventListener("submit", function(e){
-    if(!doValidation()){
-        e.preventDefault();    //stop form from submitting
-        alert("Not valid!");
-    }
-});
-
-function doValidation(){
-    var isValid = false;
-    //do your validation
-    isValid = /^\d{3}$/.test(document.querySelector("#firstname").value);
-    return isValid;
-}
-
-</script> -->
 
     <script>
 
@@ -99,17 +88,7 @@ function doValidation(){
 
     </script>
 
-    <!-- <script>
-    function validateLastNameForm() {
-      const firstName = document.forms['firstname'].value
-      if (firstName == '') {
-        // alert("Name must be filled out");
-        $(`#display-message`).html('Please enter a valid First Name.')
-        return false
-      }
-    }
-    </script> -->
-
+<!-- Last Name //////////////////////////////////////////////////////////////-->
     <span>
       <h3>Last Name *</h3>
       <input name="lastname" id="lastname" type="text" maxlength="32" required />
@@ -126,28 +105,8 @@ function doValidation(){
           this.setCustomValidity('')
         })
         </script>
-  <!-- <script>
-    function validateLastNameForm() {
-      const lastName = document.forms['lastname'].value
-      if (lastName == '') {
-        // alert("Name must be filled out");
-        $(`#display-message`).html('Please enter a valid First Name.')
-        return false
-      }
-    }
-  </script> -->
 
-  <!-- <script>
-    function validateEmailForm() {
-      const email = document.forms['email'].value
-      if (email == '') {
-        // alert("Name must be filled out");
-        $(`#display-message`).html('Please enter a valid Email.')
-        return false
-      }
-    }
-  </script> -->
-
+<!-- Email //////////////////////////////////////////////////////////////////-->
     <span>
       <h3>Email *</h3>
       <input name="email" id="email" type="email" maxlength="32" required />
@@ -163,22 +122,8 @@ function doValidation(){
       this.setCustomValidity('')
     })
     </script>
-    <!-- <script>
-      function validateConfirmEmailForm() {
-        const repeatEmail = document.forms['repeat_email'].value
-        if (repeatEmail == '') {
-          // alert("Name must be filled out");
-          $(`#display-message`).html('Please enter a valid Repeat Email.');
-          return false
-        }
-      //   if (email !== repeatEmail) {
-      //       $(`#second-display-message`).html('Please make sure Email and Repeat Email match')
-      //       return false,
-      //     }
-      }
-    </script> -->
 
-
+<!-- Repeat Email ///////////////////////////////////////////////////////////-->
     <span>
       <h3>Repeat Email *</h3>
       <input name="repeat_email" id="repeat_email" type="email" maxlength="32" required/>
@@ -199,66 +144,53 @@ function doValidation(){
 
 
 
-<!-- Phone -->
+<!-- Phone //////////////////////////////////////////////////////////////////-->
     <span>
       <h3>Phone</h3>
       <input
         name="phone"
         type="tel"
-        pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"
         maxlength="24"
         placeholder="###-###-####"
       />
     </span>
 
-<!-- Address -->
+<!-- Address ////////////////////////////////////////////////////////////////-->
     <span>
       <h3>Address</h3>
       <input name="address" type="text" maxlength="32" />
     </span>
 
-<!-- City -->
+<!-- City ///////////////////////////////////////////////////////////////////-->
     <span>
       <h3>City</h3>
       <input name="city" type="text" maxlength="32" />
     </span>
 
-<!-- State -->
+<!-- State //////////////////////////////////////////////////////////////////-->
     <span>
       <h3>State</h3>
       <input name="state" type="text" maxlength="50" />
     </span>
 
-<!-- Zip Code -->
+<!-- Zip Code ///////////////////////////////////////////////////////////////-->
     <span>
       <h3>Postal/ Zip Code</h3>
       <input name="zip" type="text" maxlength="9" />
     </span>
 
-<!-- Country -->
+<!-- Country ////////////////////////////////////////////////////////////////-->
     <span>
       <h3>Country</h3>
       <input name="country" type="text" maxlength="30" />
     </span>
 
-<!-- submit button -->
+<!-- Submit Button //////////////////////////////////////////////////////////-->
     <br />
-    <!-- <form id="submit-button" onsubmit="repeatEmail()"> -->
-      <span>
+      <span id="submit-button">
         <button>Submit Form</button>
       </span>
 
-      <script>
-// when submit button clicked
-function onSubmit() {
-
-        // if form is not filled out completley
-        alert('Please fill out all required fields.')
-        // else if no Customer already created
-      alert('Customer Successfully Created, a welcome letter has been sent to the email address provided.')
-      // else if customer already exists
-      alert('Error. No account was created. Please check you entries and try again.')}
-      </script>
     </form>
 
   </div>
