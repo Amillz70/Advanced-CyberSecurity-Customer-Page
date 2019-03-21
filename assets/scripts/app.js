@@ -6,10 +6,10 @@
 // use require without a reference to ensure a file is bundled
 // require('./example')
 
-// const events = './events.js'
+const events = './events.js'
 
 $(() => {
-  // $('#submit-button').on('submit', events.onSubmit)
+  $('#submit-button').on('submit', events.onSubmit)
   // make sure email equal, if not
   // notify user and
   // return to kill program early

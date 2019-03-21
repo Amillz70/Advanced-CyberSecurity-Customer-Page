@@ -6,7 +6,7 @@ const ui = require('./ui.js')
 
 const onSubmit = function (event) {
   event.preventDefault()
-  api.submit()
+  api.newCustomer()
     .then(ui.submitSuccess)
     .catch(ui.submitFailure)
 }
