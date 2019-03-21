@@ -15,6 +15,15 @@ require('./assets/scripts/app.js')
 // styles
 require('./assets/styles/index.scss')
 
+// document.querySelector('#firstname').addEventListener('invalid', function () {
+//   // event.preventDefault()
+//   this.setCustomValidity('This is not a 3 digit number')
+// })
+// document.querySelector('#firstname').addEventListener('submit', function () {
+//   // e.preventDefault()
+//   this.setCustomValidity('')
+// })
+
 // first name on submit
 // document.getElementById('first-name').addEventListener('submit', functSubmit)
 //
