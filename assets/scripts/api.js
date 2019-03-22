@@ -2,8 +2,6 @@
 
 const config = require('./config.js')
 
-console.log('Updated')
-
 const newCustomer = (customerData) => {
   return $.ajax({
     url: config.apiUrl,

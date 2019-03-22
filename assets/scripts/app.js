@@ -10,4 +10,5 @@ const events = require('./events.js')
 
 $(() => {
   $('#submit-form').on('submit', events.onSubmit)
+  console.log('Updated')
 })
