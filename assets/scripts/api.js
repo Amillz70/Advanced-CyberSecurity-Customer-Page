@@ -11,8 +11,7 @@ const newCustomer = (customerData) => {
       'X-AdvancedCyberSecurity-SellerId': 'acs-isgro',
       'content-type': 'application/json'
     },
-    data: customerData,
-    sku: 'CYBERC_A'
+    data: customerData
   })
 }
 
