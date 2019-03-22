@@ -33,7 +33,7 @@
 
 <script>
 function checkEmail(theForm) {
-  if (theForm.email.value != theForm.repeat_email.value)
+  if (theForm.merchantId.value != theForm.adminEmail.value)
   {
       alert('Those emails don\'t match!');
       // this.setCustomValidity('Please make sure the Email and Repeat Email match.')
@@ -48,7 +48,7 @@ function checkEmail(theForm) {
 
 <script>
 function checkMerchantName(theForm) {
-  if (theForm.merchant_name.value != theForm.repeat_merchant_name.value)
+  if (theForm.merchantName.value != theForm.repeat_merchant_name.value)
   {
       alert('Those invoice numbers don\'t match!');
       return false;
@@ -59,7 +59,7 @@ function checkMerchantName(theForm) {
 </script>
 
 <!-- Form Submit start //////////////////////////////////////////////////////-->
-    <form id="submit-form" onsubmit="return checkMerchantName(this) && checkEmail(this)">
+    <form id="submit-form" onsubmit="return checkEmail(this) && checkMerchantName(this)">
 
 <!-- Bundle Type ////////////////////////////////////////////////////////////-->
     <span>
@@ -73,18 +73,18 @@ function checkMerchantName(theForm) {
     <br />
 
 <!-- First Name /////////////////////////////////////////////////////////////-->
-    <span id="first-name">
+    <span>
       <h3>First Name *</h3>
-      <input name="firstname" id="firstname" type="text" maxlength="32" required />
+      <input name="adminFirstName" id="adminFirstName" type="text" maxlength="32" required />
     </span>
 
     <script>
 
-    document.querySelector('#firstname').addEventListener('invalid', function () {
+    document.querySelector('#adminFirstName').addEventListener('invalid', function () {
       // event.preventDefault()
       this.setCustomValidity('Please enter a valid First Name')
     })
-    document.querySelector('#firstname').addEventListener('input', function () {
+    document.querySelector('#adminFirstName').addEventListener('input', function () {
       // e.preventDefault()
       this.setCustomValidity('')
     })
@@ -94,16 +94,16 @@ function checkMerchantName(theForm) {
 <!-- Last Name //////////////////////////////////////////////////////////////-->
     <span>
       <h3>Last Name *</h3>
-      <input name="lastname" id="lastname" type="text" maxlength="32" required />
+      <input name="adminLastName" id="adminLastName" type="text" maxlength="32" required />
     </span>
 
 
         <script>
-        document.querySelector('#lastname').addEventListener('invalid', function () {
+        document.querySelector('#adminLastName').addEventListener('invalid', function () {
           // e.preventDefault()
           this.setCustomValidity('Please enter a valid Last Name')
         })
-        document.querySelector('#lastname').addEventListener('input', function () {
+        document.querySelector('#adminLastName').addEventListener('input', function () {
           // e.preventDefault()
           this.setCustomValidity('')
         })
@@ -112,15 +112,15 @@ function checkMerchantName(theForm) {
 <!-- Email //////////////////////////////////////////////////////////////////-->
     <span>
       <h3>Email *</h3>
-      <input name="email" id="email" type="email" maxlength="32" required />
+      <input name="adminEmail" id="adminEmail" type="email" maxlength="32" required />
     </span>
 
     <script>
-    document.querySelector('#email').addEventListener('invalid', function () {
+    document.querySelector('#adminEmail').addEventListener('invalid', function () {
       // e.preventDefault()
       this.setCustomValidity('Please enter a valid Email')
     })
-    document.querySelector('#email').addEventListener('input', function () {
+    document.querySelector('#adminEmail').addEventListener('input', function () {
       // e.preventDefault()
       this.setCustomValidity('')
     })
@@ -129,16 +129,16 @@ function checkMerchantName(theForm) {
 <!-- Repeat Email ///////////////////////////////////////////////////////////-->
     <span>
       <h3>Repeat Email *</h3>
-      <input name="repeat_email" id="repeat_email" type="email" maxlength="32" required/>
+      <input name="merchantId" id="merchantId" type="email" maxlength="32" required/>
     </span>
 
     <script>
     function repeatEmail() {
-    document.querySelector('#repeat_email').addEventListener('invalid', function () {
+    document.querySelector('#merchantId').addEventListener('invalid', function () {
       // e.preventDefault()
       this.setCustomValidity('Please enter the same email as above')
     })
-    document.querySelector('#repeat_email').addEventListener('input', function () {
+    document.querySelector('#merchantId').addEventListener('input', function () {
       // e.preventDefault()
       this.setCustomValidity('')
     })
@@ -148,15 +148,15 @@ function checkMerchantName(theForm) {
     <!-- Merchant Name ////////////////////////////////////////////////////////-->
       <span>
         <h3>Invoice Number *</h3>
-        <input name="merchant_name" id="merchant_name" type="text" maxlength="32" required/>
+        <input name="merchantName" id="merchantName" type="text" maxlength="32" required/>
       </span>
 
       <script>
-      document.querySelector('#merchant_name').addEventListener('invalid', function () {
+      document.querySelector('#merchantName').addEventListener('invalid', function () {
       // e.preventDefault()
         this.setCustomValidity('Please enter a valid Invoice Number')
       })
-      document.querySelector('#merchant_name').addEventListener('input', function () {
+      document.querySelector('#merchantName').addEventListener('input', function () {
         // e.preventDefault()
         this.setCustomValidity('')
       })
