@@ -1,15 +1,11 @@
 'use strict'
 
 const submitSuccess = function () {
-  '#display-message'.html('test')
+  alert('Customer Successfully Created, a welcome letter has been sent to the email address provided.')
 }
 
 const submitFailure = function () {
-  // individual failure notices?
-  // if ('#firstname' === '') {
-  //   $('#display-message').html('Please enter a First Name')
-  // }
-  '#display-message'.html('bad test')
+  alert('Error. No account was created. Please check you entries and try again.')
 }
 
 module.exports = {

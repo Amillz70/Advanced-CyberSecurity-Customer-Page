@@ -2,7 +2,7 @@
 
 const config = require('./config.js')
 
-const newCustomer = () => {
+const newCustomer = (customerData) => {
   return $.ajax({
     url: config.apiUrl,
     method: 'POST',
@@ -10,7 +10,8 @@ const newCustomer = () => {
       'Authorization': 'Bearer gYEt1ZbJmcXAnB8Vtpe50KymwMu1BNLFcTV0lRB3u97HOXz4GR',
       'X-AdvancedCyberSecurity-SellerId': 'acs-isgro',
       'content-type': 'application/json'
-    }
+    },
+    data: customerData
   })
 }
 
