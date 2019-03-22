@@ -7,10 +7,10 @@ const newCustomer = (customerData) => {
     url: config.apiUrl,
     method: 'POST',
     headers: {
-      Authorization: 'Bearer gYEt1ZbJmcXAnB8Vtpe50KymwMu1BNLFcTV0lRB3u97HOXz4GR',
-      'X-AdvancedCyberSecurity-SellerId': 'acs-isgro',
-      'content-type': 'application/json'
+      'Authorization': 'Bearer gYEt1ZbJmcXAnB8Vtpe50KymwMu1BNLFcTV0lRB3u97HOXz4GR',
+      'X-AdvancedCyberSecurity-SellerId': 'acs-isgro'
     },
+    datatype: 'json',
     data: customerData
   })
 }
