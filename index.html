@@ -44,8 +44,22 @@ function checkEmail(theForm) {
 }
 </script>
 
+<!-- Merchant Name match function ///////////////////////////////////////////-->
+
+<script>
+function checkMerchantName(theForm) {
+  if (theForm.merchant_name.value != theForm.repeat_merchant_name.value)
+  {
+      alert('Those invoice numbers don\'t match!');
+      return false;
+  } else {
+      return true;
+  }
+}
+</script>
+
 <!-- Form Submit start //////////////////////////////////////////////////////-->
-    <form id="submit-form" onsubmit="return checkEmail(this)" "return merchantId(this)">
+    <form id="submit-form" onsubmit="return checkMerchantName(this) && checkEmail(this)">
 
 <!-- Bundle Type ////////////////////////////////////////////////////////////-->
     <span>
@@ -130,6 +144,42 @@ function checkEmail(theForm) {
     })
   }
     </script>
+
+    <!-- Merchant Name ////////////////////////////////////////////////////////-->
+      <span>
+        <h3>Invoice Number *</h3>
+        <input name="merchant_name" id="merchant_name" type="text" maxlength="32" required/>
+      </span>
+
+      <script>
+      document.querySelector('#merchant_name').addEventListener('invalid', function () {
+      // e.preventDefault()
+        this.setCustomValidity('Please enter a valid Invoice Number')
+      })
+      document.querySelector('#merchant_name').addEventListener('input', function () {
+        // e.preventDefault()
+        this.setCustomValidity('')
+      })
+      </script>
+
+      <!-- Repeat Merchant Name /////////////////////////////////////////////-->
+          <span>
+            <h3>Repeat Invoice Number *</h3>
+            <input name="repeat_merchant_name" id="repeat_merchant_name" type="text" maxlength="32" required/>
+          </span>
+
+          <script>
+          function repeatMerchant() {
+          document.querySelector('#repeat_merchant_name').addEventListener('invalid', function () {
+            // e.preventDefault()
+            this.setCustomValidity('Please enter the same invoice number as above')
+          })
+          document.querySelector('#repeat_merchant_name').addEventListener('input', function () {
+            // e.preventDefault()
+            this.setCustomValidity('')
+          })
+        }
+          </script>
 
 
 
