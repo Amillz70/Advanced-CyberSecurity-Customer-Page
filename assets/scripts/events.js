@@ -7,7 +7,6 @@ const ui = require('./ui.js')
 
 const onSubmit = function (event) {
   event.preventDefault()
-  // console.log(event.target)
   const customerData = getFormFields(event.target)
   api.newCustomer(customerData)
     .then(ui.submitSuccess)
