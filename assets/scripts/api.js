@@ -1,17 +1,19 @@
 'use strict'
 
-// const config = require('./config.js')
+const config = require('./config.js')
 
 const newCustomer = (customerData) => {
-  return $.ajax({
-  //  url: config.apiUrl,
-    url: 'https://acs-v1.endpointlock.com/api/cidlicense',
-    method: 'PUT',
+  customerData.sku = 'CYBERC_A'
+
+  return fetch(config.apiUrl, {
+    method: 'POST',
+    mode: 'no-cors',
     headers: {
       'Authorization': 'Bearer gYEt1ZbJmcXAnB8Vtpe50KymwMu1BNLFcTV0lRB3u97HOXz4GR',
-      'X-AdvancedCyberSecurity-SellerId': 'acs-isgro'
+      'X-AdvancedCyberSecurity-SellerId': 'acs-isgro',
+      'Content-Type': 'application/json'
     },
-    data: customerData
+    body: JSON.stringify(customerData)
   })
 }
 
