@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <!-- Do not add `link` tags -->
+    <link rel="shortcut icon" type="image/x-icon" href="favicon.ico" />
+
+    <!-- Do not add `script` tags -->
+    <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+    <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    <!-- <script src="./index.js" type="text/javascript" charset="utf-8" defer></script> -->
+
+  </head>
+
+  <body>
+  <div class="container">
+
+<!-- Page Title and List ////////////////////////////////////////////////////-->
+    <br />
+    <h1>CyberIDLock ID Protection</h1>
+
+    <ul>
+      <li>EndpointLock Keystroke Encryption Activation Key</li>
+      <li>Access to Unlimited Dark Web Email Scanning</li>
+      <li>Your $25,000 Identity Theft Coverage</li>
+      <li>Fully Managed Recovery ID Protection services</li>
+    </ul>
+
+
+<!-- Email match function ///////////////////////////////////////////////////-->
+
+<script>
+function checkEmail(theForm) {
+  if (theForm.merchantId.value != theForm.adminEmail.value)
+  {
+      alert('Those emails don\'t match!');
+      // this.setCustomValidity('Please make sure the Email and Repeat Email match.')
+      return false;
+  } else {
+      return true;
+  }
+}
+</script>
+
+<!-- Merchant Name match function ///////////////////////////////////////////-->
+
+<script>
+function checkMerchantName(theForm) {
+  if (theForm.merchantName.value != theForm.repeat_merchant_name.value)
+  {
+      alert('Those invoice numbers don\'t match!');
+      return false;
+  } else {
+      return true;
+  }
+}
+</script>
+
+<!-- Form Submit start //////////////////////////////////////////////////////-->
+    <form id="submit-form" onsubmit="return checkEmail(this) && checkMerchantName(this)">
+    <!-- <form id="submit-form" onsubmit="return checkMerchantName(this)"> -->
+
+<!-- Bundle Type ////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Bundle Type *</h3>
+      <select name="subSellerId" id="subSellerId">
+        <!-- <option id="acs-test02_0" value="acs-test02_0" > TEST ONLY, DELETE BEFORE DEPLOY </option> -->
+        <option id="verizon1" value="verizon1" data-index="0" > 1 Device EndpointLock </option>
+        <option id="verizon3" value="verizon3" data-index="1">3 Device EndpointLock </option>
+      </select>
+    </span>
+
+    <br />
+
+<!-- First Name /////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>First Name *</h3>
+      <input name="adminFirstName" id="adminFirstName" type="text" maxlength="32" required />
+    </span>
+
+    <script>
+
+    document.querySelector('#adminFirstName').addEventListener('invalid', function () {
+      // event.preventDefault()
+      this.setCustomValidity('Please enter a valid First Name')
+    })
+    document.querySelector('#adminFirstName').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+
+    </script>
+
+<!-- Last Name //////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Last Name *</h3>
+      <input name="adminLastName" id="adminLastName" type="text" maxlength="32" required />
+    </span>
+
+
+        <script>
+        document.querySelector('#adminLastName').addEventListener('invalid', function () {
+          // e.preventDefault()
+          this.setCustomValidity('Please enter a valid Last Name')
+        })
+        document.querySelector('#adminLastName').addEventListener('input', function () {
+          // e.preventDefault()
+          this.setCustomValidity('')
+        })
+        </script>
+
+<!-- Email //////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Email *</h3>
+      <input name="adminEmail" id="adminEmail" type="email" maxlength="32" required />
+    </span>
+
+    <script>
+    document.querySelector('#adminEmail').addEventListener('invalid', function () {
+      // e.preventDefault()
+      this.setCustomValidity('Please enter a valid Email')
+    })
+    document.querySelector('#adminEmail').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+    </script>
+
+<!-- Repeat Email ///////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Repeat Email *</h3>
+      <input name="merchantId" id="merchantId" type="email" maxlength="32" required/>
+    </span>
+
+    <script>
+    function repeatEmail() {
+    document.querySelector('#merchantId').addEventListener('invalid', function () {
+      // e.preventDefault()
+      this.setCustomValidity('Please enter the same email as above')
+    })
+    document.querySelector('#merchantId').addEventListener('input', function () {
+      // e.preventDefault()
+      this.setCustomValidity('')
+    })
+  }
+
+  // function matchEmail() {
+  //      let email = document.getElementById('#adminEmail').value
+  //      let confemail = document.getElementById('#merchantId').value
+  //      if(email != confemail) {
+  //          alert('Email Not Matching!')
+  //
+  //      }
+  // }
+    </script>
+
+    <!-- Merchant Name ////////////////////////////////////////////////////////-->
+      <span>
+        <h3>Invoice Number *</h3>
+        <input name="merchantName" id="merchantName" type="text" maxlength="32" required/>
+      </span>
+
+      <script>
+      document.querySelector('#merchantName').addEventListener('invalid', function () {
+      // e.preventDefault()
+        this.setCustomValidity('Please enter a valid Invoice Number')
+      })
+      document.querySelector('#merchantName').addEventListener('input', function () {
+        // e.preventDefault()
+        this.setCustomValidity('')
+      })
+      </script>
+
+      <!-- Repeat Merchant Name /////////////////////////////////////////////-->
+          <span>
+            <h3>Repeat Invoice Number *</h3>
+            <input name="repeat_merchant_name" id="repeat_merchant_name" type="text" maxlength="32" required/>
+          </span>
+
+          <script>
+          function repeatMerchant() {
+          document.querySelector('#repeat_merchant_name').addEventListener('invalid', function () {
+            // e.preventDefault()
+            this.setCustomValidity('Please enter the same invoice number as above')
+          })
+          document.querySelector('#repeat_merchant_name').addEventListener('input', function () {
+            // e.preventDefault()
+            this.setCustomValidity('')
+          })
+        }
+          </script>
+
+
+
+<!-- Phone //////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Phone</h3>
+      <input
+        name="phone"
+        type="tel"
+        maxlength="24"
+        placeholder="###-###-####"
+      />
+    </span>
+
+<!-- Address ////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Address</h3>
+      <input name="address" type="text" maxlength="32" />
+    </span>
+
+<!-- City ///////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>City</h3>
+      <input name="city" type="text" maxlength="32" />
+    </span>
+
+<!-- State //////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>State</h3>
+      <input name="state" type="text" maxlength="50" />
+    </span>
+
+<!-- Zip Code ///////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Postal/ Zip Code</h3>
+      <input name="zip" type="text" maxlength="9" />
+    </span>
+
+<!-- Country ////////////////////////////////////////////////////////////////-->
+    <span>
+      <h3>Country</h3>
+      <input name="country" type="text" maxlength="30" />
+    </span>
+
+<!-- * Required  //////////////////////////////////////////////////////////////-->
+<h6>* - required field</h6>
+
+<script>
+console.log('Update with new url today')
+</script>
+
+<!-- Submit Button //////////////////////////////////////////////////////////-->
+    <br />
+      <span id="submit-button">
+        <button>Submit Form</button>
+      </span>
+
+    </form>
+
+  </div>
+  </body>
+</html>
