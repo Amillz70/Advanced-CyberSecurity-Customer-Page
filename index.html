@@ -60,6 +60,7 @@ function checkMerchantName(theForm) {
 
 <!-- Form Submit start //////////////////////////////////////////////////////-->
     <form id="submit-form" onsubmit="return checkEmail(this) && checkMerchantName(this)">
+    <!-- <form id="submit-form" onsubmit="return checkMerchantName(this)"> -->
 
 <!-- Bundle Type ////////////////////////////////////////////////////////////-->
     <span>
@@ -144,6 +145,15 @@ function checkMerchantName(theForm) {
       this.setCustomValidity('')
     })
   }
+
+  // function matchEmail() {
+  //      let email = document.getElementById('#adminEmail').value
+  //      let confemail = document.getElementById('#merchantId').value
+  //      if(email != confemail) {
+  //          alert('Email Not Matching!')
+  //
+  //      }
+  // }
     </script>
 
     <!-- Merchant Name ////////////////////////////////////////////////////////-->
@@ -229,7 +239,7 @@ function checkMerchantName(theForm) {
 <h6>* - required field</h6>
 
 <script>
-console.log('Updated with new url')
+console.log('Update with new url today')
 </script>
 
 <!-- Submit Button //////////////////////////////////////////////////////////-->
